@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>Name that Crypto Coin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/reset.css" rel="resetstylesheet"/>
+</head>
+<style>
+body{
+    background-image: url("assets/images/Crypto_Photo.jpg");
+}
+
+.Header {
+    margin-top:-60px;
+    margin-right:-500px;
+}
+
+#RandLetter {
+    border-style: solid;
+    background-color:black;
+    color: white;
+    border-color:white;
+    
+}
+
+h2 {
+    margin-left: 400px;
+    margin-top: 60px;
+}
+
+h1 {
+    margin-left: -150px;
+}
+
+.jumbotron {
+    background-color:darkgrey;
+    height:320px;
+    background-image: url("assets/images/banner_background.jpg");
+    color: white;
+}
+
+p{
+    margin-left: 300px;
+}
+
+#Number_of_Guesses {
+    border-style:solid;
+    background-color: black;
+    color: white;
+}
+
+#Photos {
+    border-style:solid;
+    background-color:white;
+    width:950px;
+
+}
+
+
+</style>
+<body>
+    <div class = "Header">
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-3">Guess The Crypto Coin</h1>
+                  <p class="lead">Rules: <br>1) Press Spacebar twice to Start!(Also after Every Completed Game)<br> 2) You get 9 Guesses!<br> 3) Use the Images as a hint!<br>4) Have Fun! </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+<div id = "Number_of_Guesses">
+        <div class="row">
+            <div class="col-md-4">
+        <h4> Number of Guesses: <span id="Guesses">0</span></h4>
+            </div>
+</div>
+            <div class = "col-md-4">
+        <h4>Wrong Guesses: <span id="wrong_Guess"></span></h4>
+            </div>
+            <div class = "col-md-4">
+        <h4>Wins: <span id = "TotalWins">0</span></h4>
+            </div>
+        </div>
+    <div class = "Random_Letter"></div>
+        <div class="row">
+            <div class= "col-md-12">
+        <h2><span id= "RandLetter"></span></h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <h3>Image Hints: </h3>
+        </div>
+<div id = "Photos">
+       <div class="row">
+           <div class = "col-md-2">
+        <img src="assets/images/bitcoin.png" height="150px">
+           </div>
+
+           <div class = "col-md-2">
+        <img src="assets/images/Ethereum.png" height="150px"> 
+           </div>
+
+           <div class = "col-md-2">
+        <img src="assets/images/Litecoin.png" height="150px">
+            </div>
+
+            <div class = "col-md-3">
+        <img src="assets/images/Ripple.jpg" height="150px">
+            </div>
+        <img src="assets/images/zcash.jpg" height="150px">
+            
+       </div> 
+
+    </div>
+</div>
+        
+
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
