@@ -1,3 +1,4 @@
+var NumOfWins = 0;
 //press spacebar to start the game
 TheGame();
 function TheGame() {
@@ -12,11 +13,13 @@ var randNum = Math.floor(Math.random() * words.length);
 
 var choosenWord = words[randNum];
 
-var LettersGuessed = [];
+
 var underscore = [];
 var wrongletter = [];
 var NumOfGuesses = 10;
-var TotalWins = 0;
+
+
+
 //testing
 console.log(choosenWord);
 //create understores based on length of word
@@ -39,6 +42,7 @@ if(choosenWord.indexOf(LettersGuessed) > - 1) {
     if(choosenWord[i] === LettersGuessed) {
       underscore[i] = LettersGuessed;
       console.log(underscore.join(' ')); 
+
     }
   }
 }
@@ -50,13 +54,12 @@ else {
 }
 
 if(underscore.join('') == choosenWord) {
+  var Wins = document.getElementById("TotalWins");
   alert("You Win");
-  TotalWins = (TotalWins + 1);
-  console.log(TotalWins);
   TheGame();
- 
-
-  
+  NumOfWins ++;
+  console.log(NumOfWins); 
+  Wins.textContent = NumOfWins;
 }
 
 if (NumOfGuesses === 0) {
@@ -64,11 +67,12 @@ if (NumOfGuesses === 0) {
   TheGame();
 }
 
+//var TotalWins = document.getElementById("NumOfWins");
 
 Guesses.textContent = NumOfGuesses;
 wrong_Guess.textContent = wrongletter;
 RandLetter.textContent = underscore.join(' ');
-TotalWins.textcontent = TotalWins;
+
 
 //userguess onkeyup
 }
